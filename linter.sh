@@ -2,7 +2,10 @@
 
 if ! [ -d $GOPATH/src/github.com/alecthomas/gometalinter/  ]; then
     echo "downloading gometalinter"
+	ls /usr/local/go/bin	
     go get -u github.com/alecthomas/gometalinter
+	echo "gometalinter downloaded"
+	ls /usr/local/go/bin
     gometalinter --install
     if [  "$?" != "0" ] ; then
         echo "error when installing gometalinter"
